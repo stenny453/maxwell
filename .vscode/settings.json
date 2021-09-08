@@ -1,0 +1,10 @@
+{
+    "typescript.tsdk": "./node_modules/typescript/lib",
+    "tslint.enable": false,
+    "cSpell.words": [
+        "authentification",
+        "Prénom",
+        "tabset",
+        "Ville"
+    ]
+}
