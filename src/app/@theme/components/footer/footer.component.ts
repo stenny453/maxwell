@@ -10,7 +10,7 @@ import { Component } from '@angular/core';
     </span> -->
     <div class="socials">
       <a>
-      John Maxwell Team FR ♥ by 2021
+      John Maxwell Team FR &copy; 2021
       </a>
       <!-- <a href="#" target="_blank" class="ion ion-social-github"></a>
       <a href="#" target="_blank" class="ion ion-social-facebook"></a>

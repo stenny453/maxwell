@@ -4,7 +4,113 @@
   </nb-card-header>
 
   <nb-card-body>
-    <ng2-smart-table [settings]="settings" [source]="source" (deleteConfirm)="onDeleteConfirm($event)">
-    </ng2-smart-table>
+    <!-- <ng2-smart-table [settings]="settings" [source]="source" (deleteConfirm)="onDeleteConfirm($event)">
+    </ng2-smart-table> -->
+    <table class="table table-responsive table_list" *ngIf="!showDetail">
+      <thead>
+        <th>
+          <nb-card-header>
+            ID
+          </nb-card-header>
+        </th>
+        <th>
+          <nb-card-header>
+            Nom
+          </nb-card-header>
+        </th>
+        <th>
+          <nb-card-header>
+            Prénom
+          </nb-card-header>
+        </th>
+        <th>
+          <nb-card-header>
+            Email
+          </nb-card-header>
+        </th>
+        <th>
+          <nb-card-header>
+            Ville
+          </nb-card-header>
+        </th>
+        <th>
+          <nb-card-header>
+            Pays
+          </nb-card-header>
+        </th>
+      </thead>
+      <tbody>
+        <tr *ngFor="let member of members; let i = index" class="row_list"
+        (click)="select(i)">
+          <td>
+            <nb-card-header>
+              {{member.id}}
+            </nb-card-header>
+          </td>
+          <td>
+            <nb-card-header>
+              {{member.firstName}}
+            </nb-card-header>
+          </td>
+          <td>
+            <nb-card-header>
+              {{member.lastName}}
+            </nb-card-header>
+          </td>
+          <td>
+            <nb-card-header>
+              {{member.email}}
+            </nb-card-header>
+          </td>
+          <td>
+            <nb-card-header>
+              {{member.city}}
+            </nb-card-header>
+          </td>
+          <td>
+            <nb-card-header>
+              {{member.country}}
+            </nb-card-header>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="list_pagination" *ngIf="!showDetail">
+      <nav>
+        <ul class="pagination">
+        <li class="page-item">
+        <a href="#" class="page-link" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+        </a>
+        </li>
+        <li class="page-item active"><a href="#" class="page-link">1</a></li>
+        <li class="page-item"><a href="#" class="page-link">2</a></li>
+        <li class="page-item"><a href="#" class="page-link">3</a></li>
+        <li class="page-item"><a href="#" class="page-link">4</a></li>
+        <li class="page-item"><a href="#" class="page-link">5</a></li>
+        <li class="page-item">
+        <a href="#" class="page-link" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+        </a>
+        </li>
+        </ul>
+      </nav>
+    </div>
+
+
+    <div class="contain_detail" *ngIf="showDetail">
+      <div class="head_detail">
+        <div class="back" (click)="backToList()">
+          &lt;-
+        </div>
+        <nb-card-header>
+          {{current.lastName}} &nbsp; &nbsp; {{current.firstName}}
+        </nb-card-header>
+      </div>
+      <div class="contain_detail">
+
+      </div>
+    </div>
   </nb-card-body>
 </nb-card>

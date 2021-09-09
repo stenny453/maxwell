@@ -9,7 +9,10 @@
   align-items: center;
 
   .socials {
-    font-size: 1rem;
+    font-size: 16px;
+    width: 100%;
+    display: flex;
+    justify-content: right;
 
     a {
       padding: 0.4rem;
@@ -24,7 +27,7 @@
 
   @include media-breakpoint-down(is) {
     .socials {
-      font-size: 1.5rem;
+      font-size: 16px;
     }
   }
 }

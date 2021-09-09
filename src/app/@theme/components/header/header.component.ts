@@ -53,8 +53,8 @@ export class HeaderComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
-    // this.currentTheme = this.themeService.currentTheme;
-    this.currentTheme = 'dark';
+    this.currentTheme = this.themeService.currentTheme;
+    // this.currentTheme = 'dark';
 
     this.userService.getUsers()
       .pipe(takeUntil(this.destroy$))
@@ -76,7 +76,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
       .subscribe(themeName => this.currentTheme = themeName);
 
     // Customize
-    this.changeTheme('dark')
+    // this.changeTheme('dark')
     this.user = {
       name : 'Admin',
       picture : './../../../../assets/images/profile-user.png'

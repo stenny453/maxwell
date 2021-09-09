@@ -5,3 +5,37 @@
     transform: translate3d(0, 0, 0);
   }
 }
+
+.table_list::-webkit-scrollbar {
+  width: 1px;
+  background-color: white;
+}
+
+.row_list {
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.row_list:hover {
+  opacity: 0.5 !important;
+}
+
+.list_pagination {
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  justify-content: right;
+}
+
+.contain_detail {
+  margin-top: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+.back {
+  position: absolute;
+  cursor: pointer;
+  font-size: 20px;
+  padding: 10px;
+}
